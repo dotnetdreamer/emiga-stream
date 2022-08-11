@@ -23,7 +23,7 @@ const io = require('socket.io')(config.Server.settings.socket, {
     },
     path: '/',
     serveClient: true,
-    origins: '*:*',
+    origins: [`http://localhost:${config.Server.settings.port}`],
     cookie: true,
     pingInterval: 1000,
     pingTimeout: 1000,
